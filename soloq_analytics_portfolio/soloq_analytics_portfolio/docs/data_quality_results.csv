@@ -1,0 +1,10 @@
+check,passed,detail
+unique_match_id,True,duplicates=0
+10_participants_per_match,True,bad_matches=0
+unique_match_player_key,True,duplicates=0
+valid_binary_win,True,"allowed={0,1}"
+positive_duration,True,min=16
+non_negative_core_metrics,True,checked combat/economy metrics
+all_participants_exist,True,foreign-key check to players
+all_champions_exist,True,foreign-key check to champions
+objectives_match_keys,True,foreign-key check to matches
