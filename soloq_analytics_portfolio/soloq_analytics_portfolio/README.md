@@ -1,10 +1,10 @@
-# 🎮 SoloQ Pulse — Competitive Analytics Portfolio Project
+# SoloQ Pulse — Competitive Analytics Portfolio Project
 
 > **Portfolio project — Data Analyst / BI / Product Analytics**
 >
 > A complete analytics case study around a fictional Solo Queue platform. The dataset is synthetic and intentionally designed to look like operational game data.
 
-## 🧠 Business story
+## Business story
 
 Imagine a product team wants to understand why some players climb consistently while others stagnate or stop playing. The analytics team receives match-level, player-level, champion-level and objective data.
 
@@ -23,7 +23,7 @@ This project is deliberately broader than a basic EDA. It combines:
 - Data quality checks
 - Business recommendations with an explicit evidence trail
 
-## 📦 Dataset
+## Dataset
 
 Synthetic data generated with a reproducible Python script.
 
@@ -37,7 +37,7 @@ Synthetic data generated with a reproducible Python script.
 
 **Important:** these are fictional/synthetic observations. Do not present them as Riot Games, OP.GG or real-player data.
 
-## 🎯 Deliverables to complete
+## Deliverables to complete
 
 ### 1. Executive dashboard
 Create a Power BI or Tableau dashboard with four pages:
@@ -89,7 +89,7 @@ Finish `docs/business_case.md` with:
 - Measurement plan
 - Caveats / limitations
 
-## ⭐ What makes this stand out
+## What makes this stand out
 
 The key is not having the most charts. It is connecting **metric → diagnosis → business action → follow-up metric**.
 
@@ -105,14 +105,14 @@ Example structure:
 
 Avoid claiming causality from observational synthetic data. Use language such as “associated with”, “correlated with” and “consistent with”.
 
-## 🛠 Recommended stack
+## Recommended stack
 
 - Python: pandas, numpy, matplotlib, scipy, seaborn (optional)
 - SQL: PostgreSQL / DuckDB / SQLite
 - BI: Power BI or Tableau
 - GitHub: README + notebooks + SQL + dashboard screenshots
 
-## 📁 Repository structure
+## Repository structure
 
 ```text
 soloq_analytics_portfolio/
@@ -134,7 +134,7 @@ soloq_analytics_portfolio/
 └── README.md
 ```
 
-## 🚀 GitHub checklist
+## GitHub checklist
 
 Before publishing, add:
 
@@ -145,7 +145,7 @@ Before publishing, add:
 - a data-quality result table
 - a clear note that the data is synthetic
 
-## 💼 CV-ready project description
+## CV-ready project description
 
 **SoloQ Pulse — Competitive Analytics | Python, SQL, Power BI**  
 Built an end-to-end analytics case study using 18K participant records and match-level data; modeled KPIs, segmented players, analyzed champion/role performance and designed an executive dashboard linking behavioral metrics to product actions.
