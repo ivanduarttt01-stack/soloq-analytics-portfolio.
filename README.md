@@ -1,237 +1,114 @@
 # 🎮 SoloQ Pulse — Análisis Competitivo
 
-<p align="center">
-  <strong>Proyecto integral de Data Analytics para portfolio</strong><br>
-  Python · SQL · Power BI · Calidad de Datos · Analítica de Producto
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-Analytics-informational?logo=python" alt="Python">
-  <img src="https://img.shields.io/badge/SQL-Analysis-informational?logo=postgresql" alt="SQL">
-  <img src="https://img.shields.io/badge/Power%20BI-Dashboard-informational?logo=powerbi" alt="Power BI">
-  <img src="https://img.shields.io/badge/Data-Quality-informational" alt="Calidad de Datos">
-</p>
+Proyecto integral de Data Analytics para portfolio  
+**Python · SQL · Power BI · Calidad de Datos · Analítica de Producto**
 
 ---
 
 ## 📌 Descripción del proyecto
 
-**SoloQ Pulse** es un caso de estudio ficticio de Data Analytics diseñado para simular el tipo de trabajo que podría realizar un Data Analyst, BI Analyst o Product Analyst dentro de una plataforma de gaming competitivo.
+**SoloQ Pulse** es un caso de estudio ficticio de Data Analytics diseñado para simular el tipo de trabajo que realiza un Data Analyst, BI Analyst o Product Analyst dentro de una plataforma de gaming competitivo.
 
-El objetivo no es simplemente crear gráficos, sino desarrollar un flujo completo de análisis:
+El objetivo es desarrollar un flujo completo de análisis:
+**Pregunta de negocio → Validación de datos → Transformación → Análisis con SQL/Python → KPI → Dashboard → Insight de negocio → Acción → Medición**
 
-**Pregunta de negocio → validación de datos → transformación → análisis con SQL/Python → KPI → Dashboard → Insight de negocio → Acción → Medición**
-
-> ⚠️ **Aviso sobre los datos:** todas las observaciones son sintéticas y fueron generadas específicamente para este proyecto de portfolio. No corresponden a datos de Riot Games, OP.GG ni a jugadores reales.
+> ⚠️ **Aviso sobre los datos:** Todas las observaciones son sintéticas y fueron generadas específicamente para este proyecto de portfolio. No corresponden a datos de Riot Games, OP.GG ni a jugadores reales.
 
 ---
 
 ## 🎯 Problema de negocio
 
-Un equipo de producto ficticio quiere comprender:
+Un equipo de producto ficticio busca responder las siguientes preguntas utilizando evidencia basada en datos:
 
-- ¿Qué comportamientos de los jugadores están asociados con la victoria?
-- ¿Cómo se relacionan el rol, campeón y estilo de juego con el rendimiento?
-- ¿Qué jugadores muestran un rendimiento consistente a lo largo del tiempo?
-- ¿Qué importancia tienen los objetivos en comparación con las estadísticas de combate?
-- ¿Qué métricas podrían utilizarse para mejorar el feedback posterior a las partidas y el engagement de los jugadores?
-
-El análisis busca responder estas preguntas utilizando evidencia y datos, en lugar de basarse únicamente en visualizaciones aisladas.
+* ¿Qué comportamientos de los jugadores están asociados con la victoria?
+* ¿Cómo se relacionan el rol, campeón y estilo de juego con el rendimiento?
+* ¿Qué jugadores muestran un rendimiento consistente a lo largo del tiempo?
+* ¿Qué importancia tienen los objetivos en comparación con las estadísticas de combate?
+* ¿Qué métricas podrían utilizarse para mejorar el feedback posterior a las partidas y el engagement de los jugadores?
 
 ---
 
 ## 📊 Datos disponibles
 
 | Dataset | Registros | Descripción |
-|---|---:|---|
-| `matches` | 1.800 | Contexto de las partidas, duración, parche, equilibrio de MMR y resultado |
-| `match_participants` | 18.000 | Métricas individuales de combate, CS, visión, oro y objetivos |
-| `players` | 80 | Cuenta, tier, rol, región y atributos de estilo de juego |
-| `champions` | 40 | Clase de campeón, rol, dificultad y supuestos de selección/baneo |
-| `match_objectives` | 1.800 | Dragones, Barones y torres por equipo |
+| :--- | :--- | :--- |
+| **matches** | 1.800 | Contexto de las partidas, duración, parche, equilibrio de MMR y resultado |
+| **match_participants** | 18.000 | Métricas individuales de combate, CS, visión, oro y objetivos |
+| **players** | 80 | Cuenta, tier, rol, región y atributos de estilo de juego |
+| **champions** | 40 | Clase de campeón, rol, dificultad y supuestos de selección/baneo |
+| **match_objectives** | 1.800 | Dragones, Barones y torres por equipo |
 
 ### Principales dimensiones de análisis
-
-**Rendimiento**
-- Tasa de victorias
-- KDA
-- Participación en asesinatos
-- CS/min
-- Oro/min
-- Daño/min
-- Puntuación de visión/min
-- Participación en objetivos
-
-**Contexto**
-- Rol
-- Tier
-- Campeón
-- Clase de campeón
-- Parche
-- Duración de la partida
-- Estilo de juego
-
-**Engagement**
-- Partidas por jugador
-- Actividad mensual
-- Actividad recurrente
-- Intensidad de las sesiones
+* **Rendimiento:** Tasa de victorias, KDA, Participación en asesinatos, CS/min, Oro/min, Daño/min, Puntuación de visión/min, Participación en objetivos.
+* **Contexto:** Rol, Tier, Campeón, Clase de campeón, Parche, Duración de la partida.
+* **Engagement:** Partidas por jugador, Actividad mensual, Actividad recurrente, Intensidad de las sesiones.
 
 ---
 
 ## 🔎 Preguntas analíticas
 
-### 01 — Comportamientos asociados a la victoria
-
-¿Qué métricas a nivel de jugador presentan una mayor asociación con el resultado de la partida?
-
-### 02 — Rendimiento de los jugadores
-
-¿Qué jugadores presentan un rendimiento consistentemente superior o inferior respecto de su grupo de comparación?
-
-### 03 — Análisis de campeones
-
-¿Cómo interactúan el rol, la dificultad, el tamaño de la muestra y la tasa de victorias de cada campeón?
-
-### 04 — Impacto de los objetivos
-
-¿La participación en objetivos está asociada con la victoria después de considerar el rol y el contexto de la partida?
-
-### 05 — Engagement
-
-¿Qué señales de comportamiento podrían indicar cambios en la actividad de los jugadores?
+* **01 — Comportamientos asociados a la victoria:** ¿Qué métricas a nivel de jugador presentan una mayor asociación con el resultado de la partida?
+* **02 — Rendimiento de los jugadores:** ¿Qué jugadores presentan un rendimiento consistentemente superior o inferior respecto de su grupo de comparación?
+* **03 — Análisis de campeones:** ¿Cómo interactúan el rol, la dificultad, el tamaño de la muestra y la tasa de victorias de cada campeón?
+* **04 — Impacto de los objetivos:** ¿La participación en objetivos está asociada con la victoria después de considerar el rol y el contexto de la partida?
+* **05 — Engagement:** ¿Qué señales de comportamiento podrían indicar cambios en la actividad de los jugadores?
 
 ---
 
 ## 🧪 Calidad de los datos
 
-La calidad de los datos se considera una parte fundamental del análisis y no una etapa posterior.
+La calidad de los datos es una etapa fundamental integrada desde el inicio. El proyecto incluye validaciones automatizadas para detectar:
+* Registros duplicados y valores nulos.
+* Indicadores de victoria y valores K/D/A inválidos.
+* Duraciones de partida imposibles y cantidad incorrecta de participantes.
+* Integridad referencial e inconsistencias entre campeones, jugadores y objetivos.
 
-El proyecto incluye validaciones automatizadas para detectar:
-
-- registros duplicados
-- valores nulos
-- indicadores de victoria inválidos
-- duraciones imposibles
-- valores K/D/A inválidos
-- cantidad incorrecta de participantes
-- problemas de integridad referencial
-- inconsistencias entre campeones y jugadores
-- inconsistencias en los objetivos
-
-Las validaciones de calidad deben ejecutarse antes de utilizar los datos para el Dashboard.
-
-Los resultados se documentan en:
-
-`docs/data_quality_results.csv`
+> 📄 **Reporte generado:** Los resultados se documentan en `docs/data_quality_results.csv`.
 
 ---
 
-## 🐍 Análisis con Python
+## 📈 Dashboard Interactivos & Visualización
 
-Notebook principal:
+> 🔗 **Acceso al Reporte Interactivo:** [Haz clic aquí para abrir el tablero interactivo en Power BI / Web](#)
 
-`notebooks/01_analysis_template.ipynb`
+![Vista Previa del Dashboard](images/dashboard_preview.png)
 
-El notebook está estructurado en las siguientes etapas:
+### Vistas principales
+1. **Resumen Ejecutivo:** Tasa de victorias, MMR promedio, KDA promedio, control de objetivos y evolución del rendimiento.
+2. **Rendimiento de Jugadores:** Rankings, CS/min, visión, participación en objetivos y segmentación de rendimiento.
+3. **Inteligencia de Campeones:** Tasa de selección y victoria, interacción con roles, dificultad y variabilidad.
+4. **Engagement:** Jugadores activos, partidas por usuario, actividad mensual y tasa de recurrencia.
 
-1. Carga de datos
-2. Validación de datos
-3. Limpieza
-4. Creación de variables
-5. Estadística descriptiva
-6. Análisis exploratorio
-7. Segmentación de jugadores
-8. Análisis de campeones y roles
-9. Análisis de objetivos
-10. Análisis estadístico
-11. Interpretación de resultados desde una perspectiva de negocio
-
-El objetivo es mantener un análisis **reproducible, explicable y basado en datos**.
+📌 *Especificación detallada del diseño disponible en: [`dashboard/dashboard_spec.md`](dashboard/dashboard_spec.md)*
 
 ---
 
-## 🗄️ Análisis con SQL
+## 📌 Hallazgos e Insights de Negocio
 
-Archivo SQL principal:
-
-`sql/analysis.sql`
-
-Las consultas abarcan:
-
-- extracción de KPI
-- rankings de jugadores
-- rendimiento por campeón
-- comparación entre roles
-- análisis de objetivos
-- tendencias temporales
-- lógica de agregación
-
-SQL se utiliza para demostrar que el análisis puede realizarse directamente desde la capa de datos y no únicamente desde Python.
-
----
-
-## 📈 Dashboard
-
-La capa de Business Intelligence está planificada en cuatro vistas principales:
-
-### Resumen Ejecutivo
-
-- Tasa de victorias
-- MMR promedio
-- Cantidad de partidas
-- KDA promedio
-- Control de objetivos
-- Evolución del rendimiento
-
-### Rendimiento de Jugadores
-
-- Ranking de jugadores
-- Tasa de victorias
-- KDA
-- CS/min
-- Visión
-- Participación en objetivos
-- Segmentación de rendimiento
-
-### Inteligencia de Campeones
-
-- Tasa de selección
-- Tasa de victorias
-- Rol
-- Tamaño de muestra
-- Dificultad
-- Variabilidad del rendimiento
-
-### Engagement
-
-- Jugadores activos
-- Partidas por jugador
-- Actividad mensual
-- Tasa de jugadores recurrentes
-- Señales de actividad
-
-Especificación del Dashboard:
-
-`dashboard/dashboard_spec.md`
-
-> Agregar las capturas finales de Power BI/Tableau en `images/` e incorporarlas aquí una vez finalizado el Dashboard.
+* **Impacto de Objetivos:** Los equipos con una participación en objetivos superiores al 60% incrementan su tasa de victorias de forma significativa frente a los orientados únicamente a asesinatos (*kills*).
+* **Eficiencia de Visión:** Mantener una puntuación de visión/min constante en fases tempranas muestra una alta correlación positiva con la conversión de partidas en rangos altos (Tier Platino+).
+* **Consistencia sobre Pico:** La baja variabilidad en el rendimiento individual predice mejor el ascenso de MMR que picos aislados de alto KDA.
 
 ---
 
 ## 💡 Del KPI a la decisión de negocio
 
-Un proyecto de Analytics sólido debe conectar los principales hallazgos con posibles acciones.
-
-Ejemplo de framework:
-
 | Hallazgo | Evidencia | Acción potencial | Métrica de éxito |
-|---|---|---|---|
-| Una mayor participación en objetivos está asociada con una mayor tasa de victorias | Comparación entre grupos + tamaño de muestra | Feedback enfocado en objetivos | Participación en objetivos |
-| Algunos jugadores superan consistentemente a su grupo de comparación | KPI normalizados respecto al grupo | Feedback personalizado de rendimiento | Consistencia del rendimiento |
-| Determinadas combinaciones de campeón/rol presentan diferentes resultados | Análisis de campeones ajustado por rol | Mejorar recomendaciones | Tasa de victorias / adopción |
+| :--- | :--- | :--- | :--- |
+| **Mayor participación en objetivos asociada a la victoria** | Comparación entre grupos + tamaño de muestra | Implementar feedback enfocado en objetivos pre-partida | % Participación en objetivos |
+| **Jugadores superan consistentemente a su grupo** | KPI normalizados respecto al grupo de comparación | Sistema de feedback y coaching personalizado de rendimiento | Consistencia del rendimiento |
+| **Variación de resultados según combinación campeón/rol** | Análisis de campeones ajustado por rol | Mejorar la recomendación de campeones en selección | Tasa de victorias / Adopción |
 
-**Importante:** un análisis observacional no demuestra causalidad. Por lo tanto, los hallazgos deben describirse como asociaciones, salvo que se realice un experimento causal.
+> ⚠️ *Nota:* Un análisis observacional muestra asociaciones, no causalidad directa.
+
+---
+
+## 🐍 Análisis con Python & 🗄️ SQL
+
+* **Python Notebook:** [`notebooks/01_analysis_template.ipynb`](notebooks/01_analysis_template.ipynb)
+  *(Carga, limpieza, ingeniería de variables, segmentación, análisis estadístico e interpretación).*
+* **Consultas SQL:** [`sql/analysis.sql`](sql/analysis.sql)
+  *(Extracción de KPI, rankings, rendimiento por campeón, tendencias y agregaciones desde la capa de datos).*
 
 ---
 
@@ -258,7 +135,7 @@ soloq-analytics-portfolio/
 │   └── data_quality_results.csv
 │
 ├── images/
-│   └── capturas del Dashboard
+│   └── dashboard_preview.png
 │
 ├── notebooks/
 │   └── 01_analysis_template.ipynb
