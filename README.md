@@ -55,7 +55,7 @@ Un equipo de producto ficticio busca responder las siguientes preguntas utilizan
 
 ---
 
-## 🧪 Calidad de los datos
+## Calidad de los datos
 
 La calidad de los datos es una etapa fundamental integrada desde el inicio. El proyecto incluye validaciones automatizadas para detectar:
 * Registros duplicados y valores nulos.
