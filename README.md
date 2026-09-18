@@ -1,22 +1,22 @@
-# 🎮 SoloQ Pulse — Análisis Competitivo
+# SoloQ Pulse — Análisis Competitivo
 
 Proyecto integral de Data Analytics para portfolio  
 **Python · SQL · Power BI · Calidad de Datos · Analítica de Producto**
 
 ---
 
-## 📌 Descripción del proyecto
+## Descripción del proyecto
 
 **SoloQ Pulse** es un caso de estudio ficticio de Data Analytics diseñado para simular el tipo de trabajo que realiza un Data Analyst, BI Analyst o Product Analyst dentro de una plataforma de gaming competitivo.
 
 El objetivo es desarrollar un flujo completo de análisis:
 **Pregunta de negocio → Validación de datos → Transformación → Análisis con SQL/Python → KPI → Dashboard → Insight de negocio → Acción → Medición**
 
-> ⚠️ **Aviso sobre los datos:** Todas las observaciones son sintéticas y fueron generadas específicamente para este proyecto de portfolio. No corresponden a datos de Riot Games, OP.GG ni a jugadores reales.
+>  **Aviso sobre los datos:** Todas las observaciones son sintéticas y fueron generadas específicamente para este proyecto de portfolio. No corresponden a datos de Riot Games, OP.GG ni a jugadores reales.
 
 ---
 
-## 🎯 Problema de negocio
+## Problema de negocio
 
 Un equipo de producto ficticio busca responder las siguientes preguntas utilizando evidencia basada en datos:
 
@@ -28,7 +28,7 @@ Un equipo de producto ficticio busca responder las siguientes preguntas utilizan
 
 ---
 
-## 📊 Datos disponibles
+## Datos disponibles
 
 | Dataset | Registros | Descripción |
 | :--- | :--- | :--- |
@@ -45,7 +45,7 @@ Un equipo de producto ficticio busca responder las siguientes preguntas utilizan
 
 ---
 
-## 🔎 Preguntas analíticas
+## Preguntas analíticas
 
 * **01 — Comportamientos asociados a la victoria:** ¿Qué métricas a nivel de jugador presentan una mayor asociación con el resultado de la partida?
 * **02 — Rendimiento de los jugadores:** ¿Qué jugadores presentan un rendimiento consistentemente superior o inferior respecto de su grupo de comparación?
@@ -63,11 +63,11 @@ La calidad de los datos es una etapa fundamental integrada desde el inicio. El p
 * Duraciones de partida imposibles y cantidad incorrecta de participantes.
 * Integridad referencial e inconsistencias entre campeones, jugadores y objetivos.
 
-> 📄 **Reporte generado:** Los resultados se documentan en `docs/data_quality_results.csv`.
+>  **Reporte generado:** Los resultados se documentan en `docs/data_quality_results.csv`.
 
 ---
 
-## 📈 Visualización
+## Visualización
 
 ### Vistas principales
 1. **Resumen Ejecutivo:** Tasa de victorias, MMR promedio, KDA promedio, control de objetivos y evolución del rendimiento.
@@ -79,7 +79,7 @@ La calidad de los datos es una etapa fundamental integrada desde el inicio. El p
 
 ---
 
-## 📌 Hallazgos e Insights de Negocio
+## Hallazgos e Insights de Negocio
 
 * **Impacto de Objetivos:** Los equipos con una participación en objetivos superiores al 60% incrementan su tasa de victorias de forma significativa frente a los orientados únicamente a asesinatos (*kills*).
 * **Eficiencia de Visión:** Mantener una puntuación de visión/min constante en fases tempranas muestra una alta correlación positiva con la conversión de partidas en rangos altos (Tier Platino+).
@@ -87,7 +87,7 @@ La calidad de los datos es una etapa fundamental integrada desde el inicio. El p
 
 ---
 
-## 💡 Del KPI a la decisión de negocio
+## Del KPI a la decisión de negocio
 
 | Hallazgo | Evidencia | Acción potencial | Métrica de éxito |
 | :--- | :--- | :--- | :--- |
@@ -95,11 +95,11 @@ La calidad de los datos es una etapa fundamental integrada desde el inicio. El p
 | **Jugadores superan consistentemente a su grupo** | KPI normalizados respecto al grupo de comparación | Sistema de feedback y coaching personalizado de rendimiento | Consistencia del rendimiento |
 | **Variación de resultados según combinación campeón/rol** | Análisis de campeones ajustado por rol | Mejorar la recomendación de campeones en selección | Tasa de victorias / Adopción |
 
-> ⚠️ *Nota:* Un análisis observacional muestra asociaciones, no causalidad directa.
+>  *Nota:* Un análisis observacional muestra asociaciones, no causalidad directa.
 
 ---
 
-## 🐍 Análisis con Python & 🗄️ SQL
+##  Análisis con Python & SQL
 
 * **Python Notebook:** [`notebooks/01_analysis_template.ipynb`](notebooks/01_analysis_template.ipynb)
   *(Carga, limpieza, ingeniería de variables, segmentación, análisis estadístico e interpretación).*
@@ -108,7 +108,7 @@ La calidad de los datos es una etapa fundamental integrada desde el inicio. El p
 
 ---
 
-## 🧱 Arquitectura del proyecto
+## Arquitectura del proyecto
 
 ```text
 soloq-analytics-portfolio/
