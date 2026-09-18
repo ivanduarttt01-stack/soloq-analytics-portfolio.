@@ -67,7 +67,7 @@ La calidad de los datos es una etapa fundamental integrada desde el inicio. El p
 
 ---
 
-## 📈 Dashboard Interactivos & Visualización
+## 📈 Visualización
 
 ### Vistas principales
 1. **Resumen Ejecutivo:** Tasa de victorias, MMR promedio, KDA promedio, control de objetivos y evolución del rendimiento.
