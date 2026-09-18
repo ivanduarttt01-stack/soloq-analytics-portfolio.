@@ -69,10 +69,6 @@ La calidad de los datos es una etapa fundamental integrada desde el inicio. El p
 
 ## 📈 Dashboard Interactivos & Visualización
 
-> 🔗 **Acceso al Reporte Interactivo:** [Haz clic aquí para abrir el tablero interactivo en Power BI / Web](#)
-
-![Vista Previa del Dashboard](images/dashboard_preview.png)
-
 ### Vistas principales
 1. **Resumen Ejecutivo:** Tasa de victorias, MMR promedio, KDA promedio, control de objetivos y evolución del rendimiento.
 2. **Rendimiento de Jugadores:** Rankings, CS/min, visión, participación en objetivos y segmentación de rendimiento.
